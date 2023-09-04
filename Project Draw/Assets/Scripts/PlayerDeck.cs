@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerDeck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Card[] AllCards { get; private set; }
+    private Card[] Hand;
+    private Card[] Draw;
+    private Card[] Discard;
+
+    ///TODO: what are we looking for? Hand? Draw? all cards?
+    public int cardCount => Hand.Length;
+
+    public PlayerDeck(Card[] startingCards = null)
     {
-        
+        AllCards = startingCards ?? new Card[] {};
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
